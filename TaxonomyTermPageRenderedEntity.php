@@ -22,7 +22,7 @@ class TaxonomyTermPageRenderedEntity extends BlockBase {
     if ($term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
       $config = $this->getConfiguration();
       $build = \Drupal::entityTypeManager()->getViewBuilder('taxonomy_term')
-                      ->view($term, $config['render_mode']);
+                      ->view($term, $config['view_mode']);
       return $build;
     }
     return [
