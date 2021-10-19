@@ -8,12 +8,12 @@ use Drupal\Core\Form\FormStateInterface;
  * Provides a block for rendering Taxonomy Terms in a view mode
  *
  * @Block(
- *   id = "taxonomy_term_page_rendered_entity",
- *   admin_label = @Translation("Taxonomy Term Page Rendered Entity"),
+ *   id = "taxonomy_term_rendered_entity_block",
+ *   admin_label = @Translation("Taxonomy Term Rendered Entity Block"),
  *   category = @Translation("Custom"),
  * )
  */
-class TaxonomyTermPageRenderedEntity extends BlockBase {
+class TaxonomyTermRenderedEntityBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
@@ -26,7 +26,7 @@ class TaxonomyTermPageRenderedEntity extends BlockBase {
       return $build;
     }
     return [
-      '#markup' => $this->t('Not a Taxonomy Term page')
+      '#markup' => $this->t('Not a Taxonomy Term')
     ];
   }
 
